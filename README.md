@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 🎯 Charter App Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based customer rewards tracking application that displays transactions, calculates reward points, and offers a simple routing and filtering experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📸 Screenshots
 
-### `npm start`
+![Customer List](https://github.com/user-attachments/assets/9e603475-6093-475f-80d1-1ae895e4251d)
+![Customer Transactions](https://github.com/user-attachments/assets/5d37ed5b-11c4-460a-b436-38e15a56f66f)
+![Reward Summary](https://github.com/user-attachments/assets/71335a32-ac96-43a5-9a79-1602d678757a)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📖 Introduction
 
-### `npm test`
+A retailer offers a rewards program to customers, providing points based on the amount spent per transaction:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **2 points** for every dollar spent over $100
+- **1 point** for every dollar spent between $50 and $100
 
-### `npm run build`
+**Example:**  
+A $120 purchase =  
+→ 2 × ($120 - $100) + 1 × ($100 - $50)  
+→ 2 × 20 + 1 × 50 = **90 points**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔗 API Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+http://localhost:3000/data/transactions.json
 
-### `npm run eject`
+In the project directory, run:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm install
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**🚦 App Flow **
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+On launch, the app displays the Customer List. Clicking on a customer opens their Transactions Page. By default, the transactions for the last 3 months are shown.
 
-## Learn More
+1. If a user selects a specific month and year, the app:
+2. Displays all transactions from that period.
+3. Calculates and displays reward points:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Customer List: http://localhost:3000/customers
 
-### Code Splitting
+Customer Transactions (e.g. C002): http://localhost:3000/customers/C002/transactions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+** 📦 Tech Stack **
 
-### Analyzing the Bundle Size
+React
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+React Router DOM
 
-### Making a Progressive Web App
+Styled Components or CSS Modules
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Jest + React Testing Library
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+JSON (mock API)
