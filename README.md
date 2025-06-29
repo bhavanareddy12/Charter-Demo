@@ -39,7 +39,8 @@ npm start
 
 **🚦 App Flow **
 
-On launch, the app displays the Customer List. Clicking on a customer opens their Transactions Page. By default, the transactions for the last 3 months are shown.
+On launch, the app displays the Customer List. Clicking on a customer opens their Transactions Page.
+By default, the transactions for the last 3 months are shown.
 
 1. If a user selects a specific month and year, the app:
 2. Displays all transactions from that period.
