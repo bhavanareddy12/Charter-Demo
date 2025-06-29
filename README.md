@@ -9,6 +9,8 @@ A React-based customer rewards tracking application that displays transactions, 
 ![Customer List](https://github.com/user-attachments/assets/9e603475-6093-475f-80d1-1ae895e4251d)
 ![Customer Transactions](https://github.com/user-attachments/assets/5d37ed5b-11c4-460a-b436-38e15a56f66f)
 ![Reward Summary](https://github.com/user-attachments/assets/71335a32-ac96-43a5-9a79-1602d678757a)
+![image](https://github.com/user-attachments/assets/ccb9fc1f-c8a3-4e26-b6ad-ea7dee738971)
+
 
 ---
 
@@ -46,6 +48,7 @@ By default, the transactions for the last 3 months are shown.
 2. Displays all transactions from that period.
 3. Calculates and displays reward points:
 
+created only 2 pages one is for customers list and another one is transactions.
 
 Customer List: http://localhost:3000/customers
 
